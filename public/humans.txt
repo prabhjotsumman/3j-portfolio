@@ -10,16 +10,15 @@ _______________________________________________________________________________
 
 DESIGNER | デザイナー
 
-Hamish Williams
+Prabhjot Summan
 Hand crafted design & web development
 
 Design tools:
 Figma
 Photoshop
-Blender
 
-twitter.com/hamishmw
-github.com/hamishmw
+twitter.com/prabhjotsumman
+github.com/prabhjotsumman
 
 _______________________________________________________________________________
 
@@ -27,8 +26,8 @@ TECHNOLOGY | テクノロジー
 
 React
 Next.js
-Three.js
-Framer Motion
+TypeScript
+TailwindCSS
 
 _______________________________________________________________________________
 

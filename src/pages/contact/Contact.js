@@ -33,17 +33,21 @@ export const Contact = () => {
     try {
       setSending(true);
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.value,
-          message: message.value,
-        }),
-      });
+      const response = await fetch(
+        `https://formsubmit.co/ajax/c0c7a1cfe03c3ebe246c9c83204b2aca`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: 'FormSubmit',
+            email: email.value,
+            message: message.value,
+          }),
+        }
+      );
 
       const responseMessage = await response.json();
 
@@ -71,7 +75,7 @@ export const Contact = () => {
       />
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
-          <form className={styles.form} method="post" onSubmit={onSubmit}>
+          <form className={styles.form} onSubmit={onSubmit}>
             <Heading
               className={styles.title}
               data-status={status}
@@ -94,6 +98,7 @@ export const Contact = () => {
               autoComplete="email"
               label="Your Email"
               type="email"
+              name="email"
               maxLength={512}
               {...email}
             />
@@ -105,9 +110,11 @@ export const Contact = () => {
               style={getDelay(tokens.base.durationS, initDelay)}
               autoComplete="off"
               label="Message"
+              name="message"
               maxLength={4096}
               {...message}
             />
+            <input type="hidden" name="_next" value="#" />
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div

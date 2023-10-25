@@ -68,6 +68,7 @@ export const Input = ({
           required={required}
           maxLength={maxLength}
           type={type}
+          {...rest}
         />
         <div className={styles.underline} data-focused={focused} />
       </div>

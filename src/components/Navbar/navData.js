@@ -20,17 +20,22 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
+    url: 'https://twitter.com/prabhjotsumman',
     icon: 'twitter',
   },
-  {
-    label: 'Figma',
-    url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
-  },
+  // {
+  //   label: 'Figma',
+  //   url: 'https://www.figma.com/@prabhjotsumman',
+  //   icon: 'figma',
+  // },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: 'https://github.com/prabhjotsumman',
     icon: 'github',
+  },
+  {
+    label: 'LinkedIn',
+    url: 'https://linkedin.com/in/prabhjotsumman',
+    icon: 'linkedin',
   },
 ];
